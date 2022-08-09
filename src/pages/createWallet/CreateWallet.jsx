@@ -1,9 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./creareWalllet.css";
 import profile from "./images/profile.png";
 import retry from "./images/retry.png";
 
 const CreateWallet = () => {
+  const navigate = useNavigate();
   return (
     <div className="createWalletMainBoard">
       <div className="errorDiv">
@@ -22,7 +24,10 @@ const CreateWallet = () => {
         <p className="createAccountRetry">Retry</p>
         <img className="profileImg" src={profile} alt="" />
         <img className="retryImg" src={retry} alt="" />
-        <button className="accountButton"></button>
+        <button
+          onClick={() => navigate("/wallet-registeration")}
+          className="accountButton"
+        ></button>
         <button className="accountButton"></button>
       </div>
       <input className="create-wallet-button" type="submit" value="Close" />

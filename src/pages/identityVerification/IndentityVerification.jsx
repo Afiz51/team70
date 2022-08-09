@@ -1,7 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./indentityVerification.css";
 
+const initialState = {
+  NIN: "",
+  password: "",
+  confirmPassword: "",
+};
+
 const IndentityVerification = () => {
+  const [details, setDetails] = useState(initialState);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    register();
+    console.log(details);
+  };
+  const register = async () => {
+    try {
+      const response = await axios.post(
+        "https://team70-mobile-app.herokuapp.com/api/user/register",
+        {
+          NIN: details.NIN,
+          password: details.password,
+          confirmPassword: details.confirmPassword,
+        }
+      );
+      localStorage.setItem("newUser", JSON.stringify(response.data.newUser));
+      // navigate("/your-details");
+      window.location.replace("/your-details");
+      console.log(response.data.newUser);
+    } catch (error) {
+      if (error) {
+        toast.error("Please check your NIN and try again");
+        console.log(error.response.data);
+      }
+    }
+  };
+
+  const handleChange = (e) => {
+    setDetails({ ...details, [e.target.name]: e.target.value });
+  };
+
   return (
     <div className="identityMainBoard">
       <i
@@ -19,12 +62,38 @@ const IndentityVerification = () => {
         Welcome, please enter your NIN to get started.
       </p>
 
-      <form className="NIN-form">
-        <label>NIN</label>
-        <input type="text" className="NIN-form-input" />
+      <form className="NIN-form" onSubmit={handleSubmit}>
+        <div className="yourDetailsFormGroup">
+          <label>NIN</label>
+          <input
+            type="text"
+            name="NIN"
+            value={details.NIN}
+            onChange={(e) => handleChange(e)}
+          />
+        </div>
+        <div className="yourDetailsFormGroup">
+          <label>password</label>
+          <input
+            type="text"
+            name="password"
+            value={details.password}
+            onChange={(e) => handleChange(e)}
+          />
+        </div>
+        <div className="yourDetailsFormGroup">
+          <label>confirm password</label>
+          <input
+            type="text"
+            name="confirmPassword"
+            value={details.confirmPassword}
+            onChange={(e) => handleChange(e)}
+          />
+        </div>
 
         <input className="NIN-button" type="submit" value="Verify" />
       </form>
+      <ToastContainer position="top-center" />
     </div>
   );
 };

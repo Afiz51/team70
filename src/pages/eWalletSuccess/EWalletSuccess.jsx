@@ -1,7 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./eWalletSuccess.css";
 
 const EWalletSuccess = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <div className="successMainBoard">
@@ -17,7 +21,12 @@ const EWalletSuccess = () => {
           Your eNaira wallet has been created successfully. Please check your
           email for your E-wallet details.
         </p>
-        <input className="success-page-button" type="submit" value="Continue" />
+        <input
+          onClick={() => navigate("/login")}
+          className="success-page-button"
+          type="submit"
+          value="Continue"
+        />
       </div>
     </div>
   );

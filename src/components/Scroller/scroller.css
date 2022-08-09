@@ -1,0 +1,30 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 170px;
+  height: 210px;
+  margin-right: 40px;
+  background: url("./hospitalImage.png");
+  background-size: contain;
+  box-shadow: inset 0 0 0 2000px rgb(21, 61, 134, 0.5);
+}
+
+.card > div {
+  text-align: center;
+  margin-top: 100px;
+}
+.card > div > p {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+.card > div > button {
+  background: #f6b733;
+  padding: 10px;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 10px;
+}

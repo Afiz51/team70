@@ -42,7 +42,7 @@
   display: flex;
   flex-direction: column;
 }
-.navigation-buttons > button {
+.register-navigation-button {
   background-color: transparent;
   border: none;
   margin-bottom: 20px;
@@ -53,9 +53,8 @@
   color: #f0eded;
   font-size: 20px;
   cursor: pointer;
+  width: 400px;
   font-family: nunito, sans-serif;
   font-weight: 700;
   font-style: normal;
-}
-.navigation-buttons > button {
 }

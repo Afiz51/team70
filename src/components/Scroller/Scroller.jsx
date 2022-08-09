@@ -1,15 +1,19 @@
 import React from "react";
+import "./scroller.css";
+import { useNavigate } from "react-router-dom";
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 
 const getItems = () =>
-  Array(5)
+  Array(3)
     .fill(0)
     .map((_, ind) => ({ id: `element-${ind}` }));
 
 function Scroller() {
-  const [items, setItems] = React.useState(getItems);
+  const [items] = React.useState(getItems);
   const [selected, setSelected] = React.useState([]);
-  const [position, setPosition] = React.useState(0);
+  //   const [position, setPosition] = React.useState(0);
+
+  const navigate = useNavigate();
 
   const isItemSelected = (id) => !!selected.find((el) => el === id);
 
@@ -35,6 +39,7 @@ function Scroller() {
             key={id}
             onClick={handleClick(id)}
             selected={isItemSelected(id)}
+            navigate={navigate}
           />
         ))}
       </ScrollMenu>
@@ -42,7 +47,7 @@ function Scroller() {
   );
 }
 
-function Card({ onClick, selected, title, itemId }) {
+function Card({ onClick, selected, title, itemId, navigate }) {
   const visibility = React.useContext(VisibilityContext);
 
   return (
@@ -54,7 +59,14 @@ function Card({ onClick, selected, title, itemId }) {
       }}
       tabIndex={0}
     >
-      <div className="card">Hello</div>
+      <div className="card">
+        <div>
+          <p>R.Jolad Hospital</p>
+          <button style={{ width: 116 }} onClick={() => navigate("/hmo")}>
+            Book a visit
+          </button>
+        </div>
+      </div>
       <div
         style={{
           height: "200px",

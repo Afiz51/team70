@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import image from "./images/Avatar.png";
 import "./register.css";
 
@@ -14,9 +15,19 @@ const Register = () => {
         </p>
       </div>
       <div className="navigation-buttons">
-        <button>Log In</button>
-        <button>Register as a Doctor</button>
-        <button>Register as a patient</button>
+        <Link to="/login">
+          <button className="register-navigation-button">Log In</button>
+        </Link>
+
+        <button className="register-navigation-button">
+          Register as a Doctor
+        </button>
+
+        <Link to="/identity-verification">
+          <button className="register-navigation-button">
+            Register as a patient
+          </button>
+        </Link>
       </div>
     </div>
   );

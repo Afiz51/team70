@@ -22,20 +22,77 @@
   height: 55px;
   border-radius: 20px;
 }
+.search-input::placeholder {
+  padding-left: 30px;
+  font-size: 16px;
+}
 
 .hmo-div {
   margin-top: 50px;
   width: 400px;
   height: 150px;
   background: #00308b;
+  border-radius: 10px;
 }
+.plan-div {
+  display: flex;
+}
+.hmo-title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+  padding-top: 30px;
+  margin-left: 20px;
+}
+.axa-logo {
+  position: absolute;
+  right: 70px;
+  top: 250px;
+}
+.plan-div {
+  height: 20px;
+}
+.plan-div > p {
+  margin-top: 0;
+
+  margin-left: 20px;
+  color: #fff;
+}
+.upgrade-logo {
+}
+.hmo-details {
+  padding: 8px;
+  margin-left: 135px;
+  background: #fff;
+  border-radius: 5px;
+  border: none;
+  padding-top: 15px;
+  color: #00308b;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+
 .speak-with-doctor-div {
   margin-top: 50px;
   width: 410px;
   height: 100px;
-
+  position: relative;
   background: #f9f8ff;
   box-shadow: -3px -3px 6px #ffffff, 3px 3px 6px #bed0f1;
+}
+
+.speak-with-doctor-button {
+  padding-top: 30px;
+  margin-left: 30px;
+  color: #00308b;
+  cursor: pointer;
+}
+.doubleArrow {
+  position: absolute;
+  top: 43px;
+  right: 50px;
 }
 
 .hospitals-near-me-div {
@@ -44,14 +101,34 @@
   border: 1px solid black;
   overflow-x: scroll;
 }
-.card {
-  width: 170px;
-  height: 210px;
-  margin-right: 40px;
-  background: blue;
-  background-size: contain;
-}
 
 .dashNavLinks {
   display: flex;
+  justify-content: space-between;
+}
+
+.search-icon {
+  position: absolute;
+  left: 50px;
+  top: 140px;
+}
+
+.Home {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.hospitals {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.health-tips {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.hmo-div > button {
+  cursor: pointer;
 }

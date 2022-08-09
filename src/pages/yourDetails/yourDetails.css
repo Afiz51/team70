@@ -3,6 +3,7 @@
   height: 680px;
   margin: auto;
   margin-top: 10px;
+  margin-bottom: 20px;
   overflow-y: scroll;
   flex-wrap: wrap;
   justify-content: center;
@@ -22,6 +23,7 @@
 }
 
 .yourDetailsForm {
+  padding-top: 50px;
   margin-top: 120px;
   display: flex;
   flex-direction: column;
