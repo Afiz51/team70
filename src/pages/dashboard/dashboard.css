@@ -1,0 +1,57 @@
+.dashboardMainBoard {
+  width: 410px;
+  height: 690px;
+  margin: auto;
+  margin-top: 10px;
+  overflow-y: scroll;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  opacity: 100%;
+  position: relative;
+  background-color: #f5f5f5;
+  border: 1px solid #a3a5ac;
+}
+
+.search-input {
+  background: rgb(229, 232, 246);
+  border: none;
+  width: 400px;
+  height: 55px;
+  border-radius: 20px;
+}
+
+.hmo-div {
+  margin-top: 50px;
+  width: 400px;
+  height: 150px;
+  background: #00308b;
+}
+.speak-with-doctor-div {
+  margin-top: 50px;
+  width: 410px;
+  height: 100px;
+
+  background: #f9f8ff;
+  box-shadow: -3px -3px 6px #ffffff, 3px 3px 6px #bed0f1;
+}
+
+.hospitals-near-me-div {
+  display: flex;
+  position: absolute;
+  border: 1px solid black;
+  overflow-x: scroll;
+}
+.card {
+  width: 170px;
+  height: 210px;
+  margin-right: 40px;
+  background: blue;
+  background-size: contain;
+}
+
+.dashNavLinks {
+  display: flex;
+}

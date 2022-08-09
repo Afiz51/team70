@@ -1,0 +1,60 @@
+.registerationMainBoard {
+  width: 400px;
+  height: 690px;
+  margin: auto;
+  margin-top: 10px;
+  overflow-y: scroll;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  opacity: 100%;
+  position: relative;
+  background-color: #f5f5f5;
+  border: 1px solid #a3a5ac;
+}
+
+.yourDetails-div {
+  background: #f5f5f5;
+  width: 25rem;
+  position: fixed;
+  top: 11;
+}
+
+.yourDetailsForm {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.yourDetailsFormGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.yourDetailsFormGroup > label {
+  margin-bottom: 10px;
+}
+.yourDetailsFormGroup > input {
+  width: 360px;
+  height: 50px;
+  border: 1px solid #b9b9b9;
+  border-radius: 10px;
+  background: linear-gradient(109.76deg, #f9f8ff 0%, #f9f8ff 118.31%);
+}
+
+.E-wallet-details-button {
+  margin-top: 50px;
+  border-radius: 40px;
+  border: none;
+  background: linear-gradient(91.19deg, #f7b70f 0%, #f7b70f 108.57%);
+  color: #00308b;
+  font-size: 24px;
+  font-weight: 900;
+
+  width: 78%;
+  padding: 1rem;
+}

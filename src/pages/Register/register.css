@@ -1,0 +1,61 @@
+.mainBoard {
+  width: 400px;
+  height: 800px;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px;
+  opacity: 100%;
+  position: relative;
+  background-color: #00308b;
+  border: 1px solid #a3a5ac;
+}
+
+.doctor-image-div {
+  height: 400px;
+}
+
+.login-doctor-image {
+  width: 409px;
+  height: 400px;
+}
+
+.login-text-div {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.login-text {
+  font-size: 21.3px;
+  height: 100%;
+  width: 400px;
+  color: #f0eded;
+  text-align: center;
+  font-family: nunito, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.navigation-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.navigation-buttons > button {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f0eded;
+  text-align: start;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  color: #f0eded;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: nunito, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.navigation-buttons > button {
+}
