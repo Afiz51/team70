@@ -46,7 +46,7 @@ const EwalletRegisteration = () => {
       );
       toast(response.data.response_message);
       console.log(response.data);
-      //window.location.replace("/wallet-created");
+      window.location.replace("/wallet-created");
     } catch (error) {
       if (error) console.log(error.message);
     }
