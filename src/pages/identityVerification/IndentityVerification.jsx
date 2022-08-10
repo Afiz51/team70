@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import Loader from "../../components/Loader/Loader";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./indentityVerification.css";
@@ -13,6 +13,7 @@ const initialState = {
 
 const IndentityVerification = () => {
   const [details, setDetails] = useState(initialState);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,6 +22,7 @@ const IndentityVerification = () => {
   };
   const register = async () => {
     try {
+      setIsLoading(true);
       const response = await axios.post(
         "https://team70-mobile-app.herokuapp.com/api/user/register",
         {
@@ -31,10 +33,12 @@ const IndentityVerification = () => {
       );
       localStorage.setItem("newUser", JSON.stringify(response.data.newUser));
       // navigate("/your-details");
+      setIsLoading(false);
       window.location.replace("/your-details");
       console.log(response.data.newUser);
     } catch (error) {
       if (error) {
+        setIsLoading(false);
         toast.error("Please check your NIN and try again");
         console.log(error.response.data);
       }
@@ -90,8 +94,11 @@ const IndentityVerification = () => {
             onChange={(e) => handleChange(e)}
           />
         </div>
-
-        <input className="NIN-button" type="submit" value="Verify" />
+        {isLoading ? (
+          <Loader marginTop="140px" marginLeft="150px" />
+        ) : (
+          <input className="NIN-button" type="submit" value="Verify" />
+        )}
       </form>
       <ToastContainer position="top-center" />
     </div>

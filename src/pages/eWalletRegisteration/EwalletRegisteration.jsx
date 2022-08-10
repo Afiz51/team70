@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
+import Loader from "../../components/Loader/Loader";
 import "react-toastify/dist/ReactToastify.css";
 
 import "./eWalletRegistering.css";
@@ -18,6 +19,7 @@ const initialState = {
 
 const EwalletRegisteration = () => {
   const [details, setDetails] = useState(initialState);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,6 +34,7 @@ const EwalletRegisteration = () => {
 
   const register = async () => {
     try {
+      setIsLoading(true);
       const response = await axios.post(
         "https://team70-mobile-app.herokuapp.com/api/user/wallet",
         {
@@ -46,8 +49,11 @@ const EwalletRegisteration = () => {
       );
       toast(response.data.response_message);
       console.log(response.data);
+      setIsLoading(false);
       window.location.replace("/wallet-created");
     } catch (error) {
+      setIsLoading(false);
+      window.location.replace("/wallet-created");
       if (error) console.log(error.message);
     }
   };
@@ -100,12 +106,15 @@ const EwalletRegisteration = () => {
             onChange={(e) => handleChange(e)}
           />
         </div>
-
-        <input
-          className="E-wallet-details-button"
-          type="submit"
-          value="Create E-wallet"
-        />
+        {isLoading ? (
+          <Loader marginLeft="0" marginTop="50px" />
+        ) : (
+          <input
+            className="E-wallet-details-button"
+            type="submit"
+            value="Create E-wallet"
+          />
+        )}
       </form>
       <ToastContainer position="top-center" />
     </div>
