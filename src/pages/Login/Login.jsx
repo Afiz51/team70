@@ -57,7 +57,7 @@ const Login = () => {
         <p className="identityText">Identity Verification</p>
         <hr className="horizontal-rule" />
         <p className="welcome-text">
-          Welcome, please enter your NIN to get started.
+          Welcome, please enter your Login details to get started.
         </p>
 
         <form className="NIN-form" onSubmit={handleSubmit}>

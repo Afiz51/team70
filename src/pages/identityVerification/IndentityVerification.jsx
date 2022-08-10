@@ -75,7 +75,7 @@ const IndentityVerification = () => {
         <div className="yourDetailsFormGroup">
           <label>password</label>
           <input
-            type="text"
+            type="password"
             name="password"
             value={details.password}
             onChange={(e) => handleChange(e)}
@@ -84,7 +84,7 @@ const IndentityVerification = () => {
         <div className="yourDetailsFormGroup">
           <label>confirm password</label>
           <input
-            type="text"
+            type="password"
             name="confirmPassword"
             value={details.confirmPassword}
             onChange={(e) => handleChange(e)}
