@@ -25,7 +25,7 @@ const Dashboard = () => {
           <p>ID: 001122</p>
         </div>
         <img className="upgrade-logo" src={upgrade} alt="" />
-        <Link to="/hmo">
+        <Link to="/view-hmo">
           <button className="hmo-details">View HMO Details</button>
         </Link>
       </div>
@@ -40,14 +40,14 @@ const Dashboard = () => {
         <img className="doubleArrow" src={doubleArrow} alt="" />
       </div>
 
-      <h2>Hospitals Near Me</h2>
+      <h2 style={{ marginTop: 40 }}>Hospitals Near Me</h2>
       <Scroller />
       <div className="dashNavLinks">
         <div className="buttonGroup Home">
           <img src={home} alt="" />
         </div>
         <div className="buttonGroup hospitals">
-          <img src={hospital} alt="" />
+          <img src={hospital} alt="" onClick={() => navigate("/hospitals")} />
         </div>
         <div className="buttonGroup health-tips">
           <img src={healthtips} alt="" />

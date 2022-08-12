@@ -8,9 +8,11 @@ import EWalletSuccess from "./pages/eWalletSuccess/EWalletSuccess";
 import EwalletRegisteration from "./pages/eWalletRegisteration/EwalletRegisteration";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Login from "./pages/Login/Login";
-import Hmo from "./pages/folder/Hmo";
-import SpeakWithDoctor from "./pages/speakWithDoctor/SpeakWithDoctor";
-import HealthTips from "./pages/healthTips/HealthTips";
+import ViewHmo from "./pages/viewHmo/NiewHmo";
+import Hospitals from "./pages/Hopsitals/Hospitals";
+import BookAVisit from "./pages/bookAVisit/BookAVisit";
+import CallOrChatWithDoctor from "./pages/callOrChatWithDoctor/CallOrChatWithDoctor";
+
 
 function App() {
   return (
@@ -31,9 +33,10 @@ function App() {
           />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/hmo" element={<Hmo />} />
-          <Route path="/speak-with-doctor" element={<SpeakWithDoctor />} />
-          <Route path="/health-tips" element={<HealthTips />} />
+          <Route path="/book-a-visit" element={<BookAVisit />} />
+          <Route path="/view-hmo" element={<ViewHmo />} />
+          <Route path="/hospitals" element={<Hospitals />} />
+          <Route path="/call-or-chat" element={<CallOrChatWithDoctor />} />
         </Routes>
       </Router>
     </div>

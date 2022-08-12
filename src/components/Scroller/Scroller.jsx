@@ -62,7 +62,10 @@ function Card({ onClick, selected, title, itemId, navigate }) {
       <div className="card">
         <div>
           <p>R.Jolad Hospital</p>
-          <button style={{ width: 116 }} onClick={() => navigate("/hmo")}>
+          <button
+            style={{ width: 116 }}
+            onClick={() => navigate("/book-a-visit")}
+          >
             Book a visit
           </button>
         </div>
