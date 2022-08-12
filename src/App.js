@@ -9,6 +9,8 @@ import EwalletRegisteration from "./pages/eWalletRegisteration/EwalletRegisterat
 import Dashboard from "./pages/dashboard/Dashboard";
 import Login from "./pages/Login/Login";
 import Hmo from "./pages/folder/Hmo";
+import SpeakWithDoctor from "./pages/speakWithDoctor/SpeakWithDoctor";
+import HealthTips from "./pages/healthTips/HealthTips";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
           <Route path="/hmo" element={<Hmo />} />
+          <Route path="/speak-with-doctor" element={<SpeakWithDoctor />} />
+          <Route path="/health-tips" element={<HealthTips />} />
         </Routes>
       </Router>
     </div>

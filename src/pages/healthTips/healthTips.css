@@ -1,0 +1,129 @@
+.health-tips-container {
+  width: 400px;
+  height: 760px;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  opacity: 100%;
+  background-color: #fff;
+  border: 1px solid #a3a5ac;
+}
+
+.health-tips_header {
+  display: flex;
+  justify-content: center;
+}
+
+.black-arrow {
+  display: inline;
+  position: absolute;
+  margin-right: 350px;
+  margin-top: 27px;
+  font-size: 24px;
+}
+
+.health-tips_h1 {
+  /* position: absolute; */
+  width: 131px;
+  height: 31px;
+  left: 149px;
+  top: 62px;
+
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31px;
+  /* identical to box height */
+
+  color: #3a3a3a;
+}
+
+.health-tips_column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+}
+
+.health-tips_column-run {
+  /* position: absolute; */
+  width: 390px;
+  height: 123px;
+  left: 19px;
+  top: 120px;
+
+  background: #f9f8ff;
+  box-shadow: -1.5px -1.5px 3px #ffffff, 1.5px 1.5px 3px #bed0f1;
+  border-radius: 10px;
+}
+
+.health-tips_column-run_p {
+  margin-top: -90px;
+  margin-left: 130px;
+}
+
+.health-tips_column-food {
+  width: 390px;
+  height: 123px;
+  left: 19px;
+  top: 120px;
+
+  background: #f9f8ff;
+  box-shadow: -1.5px -1.5px 3px #ffffff, 1.5px 1.5px 3px #bed0f1;
+  border-radius: 10px;
+
+  margin-top: 15px;
+}
+
+.health-tips_column-food_p {
+  margin-top: -90px;
+  margin-left: 130px;
+}
+
+.health-tips_column-apple {
+  width: 390px;
+  height: 123px;
+  left: 19px;
+  top: 120px;
+
+  background: #f9f8ff;
+  box-shadow: -1.5px -1.5px 3px #ffffff, 1.5px 1.5px 3px #bed0f1;
+  border-radius: 10px;
+
+  margin-top: 15px;
+}
+
+.health-tips_column-apple_p {
+  margin-top: -90px;
+  margin-left: 130px;
+}
+
+.bot-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 225px;
+}
+
+.bot-links_home {
+  cursor: pointer;
+  display: flex;
+  margin-right: 70px;
+  flex-direction: column;
+  margin-top: 2px;
+}
+
+.bot-links_hospital {
+  cursor: pointer;
+  display: flex;
+  margin-right: 70px;
+  flex-direction: column;
+}
+
+.bot-links_healthtips {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
