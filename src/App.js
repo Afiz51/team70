@@ -13,6 +13,7 @@ import Hospitals from "./pages/Hopsitals/Hospitals";
 import BookAVisit from "./pages/bookAVisit/BookAVisit";
 import CallOrChatWithDoctor from "./pages/callOrChatWithDoctor/CallOrChatWithDoctor";
 
+
 function App() {
   return (
     <div className="App">
