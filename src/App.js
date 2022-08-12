@@ -8,11 +8,11 @@ import EWalletSuccess from "./pages/eWalletSuccess/EWalletSuccess";
 import EwalletRegisteration from "./pages/eWalletRegisteration/EwalletRegisteration";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Login from "./pages/Login/Login";
-
 import ViewHmo from "./pages/viewHmo/NiewHmo";
 import Hospitals from "./pages/Hopsitals/Hospitals";
 import BookAVisit from "./pages/bookAVisit/BookAVisit";
 import CallOrChatWithDoctor from "./pages/callOrChatWithDoctor/CallOrChatWithDoctor";
+
 
 function App() {
   return (
