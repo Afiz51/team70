@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Loader from "../../components/Loader/Loader";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
@@ -12,6 +12,7 @@ const initialState = {
 };
 const Login = () => {
   const [details, setDetails] = useState(initialState);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,6 +23,7 @@ const Login = () => {
 
   const login = async () => {
     try {
+      setIsLoading(true);
       const response = await axios.post(
         "https://team70-mobile-app.herokuapp.com/api/user/signin",
         {
@@ -29,11 +31,13 @@ const Login = () => {
           password: details.password,
         }
       );
+      setIsLoading(false);
       window.location.replace("/dashboard");
       console.log(response);
     } catch (error) {
       if (error) {
         toast.error("Invalid credentials");
+        setIsLoading(false);
         console.log(error.message);
       }
     }
@@ -79,7 +83,11 @@ const Login = () => {
               onChange={(e) => handleChange(e)}
             />
           </div>
-          <input className="NIN-button" type="submit" value="Login" />
+          {isLoading ? (
+            <Loader marginTop="230px" />
+          ) : (
+            <input className="NIN-button" type="submit" value="Login" />
+          )}
         </form>
       </div>
       <ToastContainer position="top-center" />
