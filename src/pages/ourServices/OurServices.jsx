@@ -1,14 +1,9 @@
 import React from "react";
-import home from "../dashboard/images/home.png";
-import hospital from "../dashboard/images/hospital.png";
-import healthtips from "../dashboard/images/health-tips.png";
-import callIcon from "./images/call-icon.png";
-import chatIcon from "./images/chat-icon.png";
-import "./callOrChatWithDoctor.css";
 
-const CallOrChatWithDoctor = () => {
+const OurServices = () => {
   return (
-    <div className="callOrChatMainBoard">
+    <div>
+      {" "}
       <i
         class="fa-solid fa-arrow-left"
         style={{
@@ -51,7 +46,6 @@ const CallOrChatWithDoctor = () => {
           <img src={chatIcon} alt="" />
         </div>
       </div>
-
       <div className="book-a-visit-Links callOrChat">
         <div className="buttonGroup Home">
           <img src={home} alt="" />
@@ -67,4 +61,4 @@ const CallOrChatWithDoctor = () => {
   );
 };
 
-export default CallOrChatWithDoctor;
+export default OurServices;
