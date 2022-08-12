@@ -84,7 +84,10 @@ const Hospitals = () => {
         <div className="buttonGroup hospitals">
           <img src={hospital} alt="" />
         </div>
-        <div className="buttonGroup health-tips">
+        <div
+          className="buttonGroup health-tips"
+          onClick={() => navigate("/health-tips")}
+        >
           <img src={healthtips} alt="" />
         </div>
       </div>

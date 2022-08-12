@@ -1,9 +1,12 @@
 import React from "react";
+import "./ourservices.css";
+import home from "../dashboard/images/home.png";
+import hospital from "../dashboard/images/hospital.png";
+import healthtips from "../dashboard/images/health-tips.png";
 
 const OurServices = () => {
   return (
-    <div>
-      {" "}
+    <div className="ourServicesMainBoard">
       <i
         class="fa-solid fa-arrow-left"
         style={{
@@ -14,39 +17,33 @@ const OurServices = () => {
         }}
       ></i>
       <p className="hmoText" style={{ marginLeft: 30, fontSize: 24 }}>
-        Speak with a Doctor
+        Our Services
       </p>
       <div className="contact-information" style={{ fontWeight: 600 }}>
-        <p>How would you like to speak with a doctor?</p>
+        <p style={{ fontWeight: 300 }}>
+          Please select a service to book an appointment{" "}
+        </p>
       </div>
-      <div className="call-a-doctor">
-        <div>
-          <p style={{ fontSize: 22, fontWeight: 700, paddingTop: 20 }}>
-            Call a Doctor
-          </p>
+      <div className="our-services-div">
+        <div className="cardiologist service">
+          <h4>Cardiologist</h4>
         </div>
-        <div>
-          <p>
-            Connect with a doctor instantly by dialing our toll free number.
-          </p>
-          <img src={callIcon} alt="" />
+        <div className="cardiologist service">
+          <h4>Cardiologist</h4>
         </div>
-      </div>
-      <div className="chat-with-a-doctor">
-        <div>
-          <p style={{ fontSize: 22, fontWeight: 700, paddingTop: 20 }}>
-            Chat with a doctor
-          </p>
+        <div className="cardiologist service">
+          <h4>Cardiologist</h4>
         </div>
-        <div>
-          <p>
-            Ask unlimited questions to licensed doctors and receive personalized
-            help.
-          </p>
-          <img src={chatIcon} alt="" />
+        <div className="cardiologist service">
+          <h4>Cardiologist</h4>
         </div>
       </div>
-      <div className="book-a-visit-Links callOrChat">
+      <input
+        className="book-an-appointment-button"
+        type="submit"
+        value="Book an Appointment"
+      />
+      <div className="book-a-visit-Links ourServices">
         <div className="buttonGroup Home">
           <img src={home} alt="" />
         </div>

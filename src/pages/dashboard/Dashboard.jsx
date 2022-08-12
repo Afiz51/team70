@@ -32,7 +32,7 @@ const Dashboard = () => {
       <div className="speak-with-doctor-div">
         <h1
           className="speak-with-doctor-button"
-          onClick={() => navigate("/hmo")}
+          onClick={() => navigate("/speak-with-doctor")}
         >
           Speak with a Doctor
         </h1>
@@ -44,13 +44,17 @@ const Dashboard = () => {
       <Scroller />
       <div className="dashNavLinks">
         <div className="buttonGroup Home">
-          <img src={home} alt="" />
+          <img src={home} alt="" onClick={() => navigate("/health-tips")} />
         </div>
         <div className="buttonGroup hospitals">
           <img src={hospital} alt="" onClick={() => navigate("/hospitals")} />
         </div>
         <div className="buttonGroup health-tips">
-          <img src={healthtips} alt="" />
+          <img
+            src={healthtips}
+            alt=""
+            onClick={() => navigate("/health-tips")}
+          />
         </div>
       </div>
     </div>

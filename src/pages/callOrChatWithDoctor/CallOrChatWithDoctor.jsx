@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import home from "../dashboard/images/home.png";
 import hospital from "../dashboard/images/hospital.png";
 import healthtips from "../dashboard/images/health-tips.png";
@@ -7,6 +8,7 @@ import chatIcon from "./images/chat-icon.png";
 import "./callOrChatWithDoctor.css";
 
 const CallOrChatWithDoctor = () => {
+  const navigate = useNavigate();
   return (
     <div className="callOrChatMainBoard">
       <i
@@ -53,13 +55,22 @@ const CallOrChatWithDoctor = () => {
       </div>
 
       <div className="book-a-visit-Links callOrChat">
-        <div className="buttonGroup Home">
+        <div
+          className="buttonGroup Home"
+          onClick={() => navigate("/dashboard")}
+        >
           <img src={home} alt="" />
         </div>
-        <div className="buttonGroup hospitals">
+        <div
+          className="buttonGroup hospitals"
+          onClick={() => navigate("/hospitals")}
+        >
           <img src={hospital} alt="" />
         </div>
-        <div className="buttonGroup health-tips">
+        <div
+          className="buttonGroup health-tips"
+          onClick={() => navigate("/health-tips")}
+        >
           <img src={healthtips} alt="" />
         </div>
       </div>

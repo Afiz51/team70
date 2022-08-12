@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import home from "./images/home.png";
 import healthtips from "./images/health-tips.png";
 import hospital from "./images/hospital.png";
-import './speakWithDoctor.css';
+import "./speakWithDoctor.css";
 
 const SpeakWithDoctor = () => {
+  const navigate = useNavigate();
   return (
     <div className="speakWith-container">
-      <i
-        class="fa-solid fa-arrow-left black-arrow"></i>
       <div className="speak-with-div">
         <p className="speakWith-header">Speak with a Doctor</p>
         <input type="text" placeholder="Search" className="speakWith-input" />
@@ -37,20 +37,34 @@ const SpeakWithDoctor = () => {
           <h4>General Doctor</h4>
         </div>
       </div>
-      <input className="continue-button" type="submit" value="Continue" />
+      <input
+        className="continue-button"
+        type="submit"
+        value="Continue"
+        onClick={() => navigate("/call-or-chat")}
+      />
       <div className="bottom-links">
-        <div className="bottom-links_home">
+        <div
+          className="bottom-links_home"
+          onClick={() => navigate("/dashboard")}
+        >
           <img src={home} alt="" />
         </div>
-        <div className="bottom-links_hospital">
+        <div
+          className="bottom-links_hospital"
+          onClick={() => navigate("/dashboard")}
+        >
           <img src={hospital} alt="" />
         </div>
-        <div className="bottom-links_healthtips">
+        <div
+          className="bottom-links_healthtips"
+          onClick={() => navigate("/dashboard")}
+        >
           <img src={healthtips} alt="" />
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default SpeakWithDoctor
+export default SpeakWithDoctor;

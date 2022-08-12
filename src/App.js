@@ -12,7 +12,9 @@ import ViewHmo from "./pages/viewHmo/NiewHmo";
 import Hospitals from "./pages/Hopsitals/Hospitals";
 import BookAVisit from "./pages/bookAVisit/BookAVisit";
 import CallOrChatWithDoctor from "./pages/callOrChatWithDoctor/CallOrChatWithDoctor";
-
+import HealthTips from "./pages/healthTips/HealthTips";
+import SpeakWithDoctor from "./pages/speakWithDoctor/SpeakWithDoctor";
+import OurServices from "./pages/ourServices/OurServices";
 
 function App() {
   return (
@@ -37,6 +39,9 @@ function App() {
           <Route path="/view-hmo" element={<ViewHmo />} />
           <Route path="/hospitals" element={<Hospitals />} />
           <Route path="/call-or-chat" element={<CallOrChatWithDoctor />} />
+          <Route path="/speak-with-doctor" element={<SpeakWithDoctor />} />
+          <Route path="/health-tips" element={<HealthTips />} />
+          <Route path="/our-services" element={<OurServices />} />
         </Routes>
       </Router>
     </div>

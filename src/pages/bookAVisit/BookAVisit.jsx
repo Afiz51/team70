@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import home from "../dashboard/images/home.png";
 import hospital from "../dashboard/images/hospital.png";
 import healthtips from "../dashboard/images/health-tips.png";
 import "./bookavisit.css";
 
 const BookAVisit = () => {
+  const navigate = useNavigate();
   return (
     <div className="bookAVisitMainBoard">
       <i
@@ -35,15 +37,25 @@ const BookAVisit = () => {
         className="book-an-appointment-button"
         type="submit"
         value="Book an Appointment"
+        onClick={() => navigate("/our-services")}
       />
       <div className="book-a-visit-Links">
-        <div className="buttonGroup Home">
+        <div
+          className="buttonGroup Home"
+          onClick={() => navigate("/dashboard")}
+        >
           <img src={home} alt="" />
         </div>
-        <div className="buttonGroup hospitals">
+        <div
+          className="buttonGroup hospitals"
+          onClick={() => navigate("/hospitals")}
+        >
           <img src={hospital} alt="" />
         </div>
-        <div className="buttonGroup health-tips">
+        <div
+          className="buttonGroup health-tips"
+          onClick={() => navigate("/health-tips")}
+        >
           <img src={healthtips} alt="" />
         </div>
       </div>

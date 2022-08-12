@@ -1,13 +1,15 @@
-import React from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import Runner from "./images/Runner.png";
-import Food from './images/Food.png';
-import Apple from './images/Apple.png';
+import Food from "./images/Food.png";
+import Apple from "./images/Apple.png";
 import home from "./images/home.png";
 import healthtips from "./images/health-tips.png";
 import hospital from "./images/hospital.png";
-import './healthTips.css';
+import "./healthTips.css";
 
 const HealthTips = () => {
+  const navigate = useNavigate();
   return (
     <div className="health-tips-container">
       <i class="fa-solid fa-arrow-left black-arrow"></i>
@@ -41,18 +43,22 @@ const HealthTips = () => {
         </div>
       </div>
       <div className="bot-links">
-        <div className="bot-links_home">
+        <div className="bot-links_home" onClick={() => navigate("/dashboard")}>
           <img src={home} alt="" />
         </div>
         <div className="bot-links_hospital">
-          <img src={hospital} alt="" />
+          <img src={hospital} alt="" onClick={() => navigate("/hospitals")} />
         </div>
         <div className="bot-links_healthtips">
-          <img src={healthtips} alt="" />
+          <img
+            src={healthtips}
+            alt=""
+            onClick={() => navigate("/health-tips")}
+          />
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default HealthTips
+export default HealthTips;

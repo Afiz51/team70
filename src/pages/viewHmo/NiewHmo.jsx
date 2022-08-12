@@ -36,13 +36,19 @@ const ViewHmo = () => {
         </div>
       </div>
       <div className="dashNavLinks view-hmo">
-        <div className="buttonGroup Home">
+        <div
+          className="buttonGroup Home"
+          onClick={() => navigate("/dashboard")}
+        >
           <img src={home} alt="" />
         </div>
         <div className="buttonGroup hospitals">
           <img src={hospital} alt="" onClick={() => navigate("/hospitals")} />
         </div>
-        <div className="buttonGroup health-tips">
+        <div
+          className="buttonGroup health-tips"
+          onClick={() => navigate("/health-tips")}
+        >
           <img src={healthtips} alt="" />
         </div>
       </div>
