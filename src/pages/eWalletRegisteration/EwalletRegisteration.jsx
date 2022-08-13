@@ -101,7 +101,7 @@ const EwalletRegisteration = () => {
         <div className="yourDetailsFormGroup">
           <label>Password</label>
           <input
-            type="text"
+            type="password"
             name="password"
             onChange={(e) => handleChange(e)}
           />
