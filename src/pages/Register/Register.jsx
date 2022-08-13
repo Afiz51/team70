@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import image from "./images/app-name.png";
+import doctorImage from "./images/Avatar.png";
 import "./register.css";
 
 const Register = () => {
   return (
     <div className="mainBoard">
+      <img src={doctorImage} alt="" />
       <img class="login-doctor-image" src={image} alt="" />
 
       <div className="login-text-div">
