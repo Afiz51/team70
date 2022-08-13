@@ -27,7 +27,7 @@ const Register = () => {
 
         <Link to="/identity-verification">
           <button className="register-navigation-button">
-            Register as a patient
+            Register as a Patient
           </button>
         </Link>
       </div>
