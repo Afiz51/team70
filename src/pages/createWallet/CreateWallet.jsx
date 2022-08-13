@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./creareWalllet.css";
-import profile from "./images/profile.png";
+import cancel from "./images/cancel-img.png";
 import retry from "./images/retry.png";
 
 const CreateWallet = () => {
@@ -20,17 +20,22 @@ const CreateWallet = () => {
         to open an eNaira wallet.
       </p>
       <div className="createAccountDiv">
-        <p className="createAccountText">Create Account</p>
+        <p className="createAccountText">Exit</p>
         <p className="createAccountRetry">Retry</p>
-        <img className="profileImg" src={profile} alt="" />
+        <img className="profileImg" src={cancel} alt="" />
         <img className="retryImg" src={retry} alt="" />
         <button
-          onClick={() => navigate("/wallet-registeration")}
           className="accountButton"
+          onClick={() => navigate("/")}
         ></button>
         <button className="accountButton"></button>
       </div>
-      <input className="create-wallet-button" type="submit" value="Close" />
+      <input
+        className="create-wallet-button"
+        type="submit"
+        value="Create Account"
+        onClick={() => navigate("/wallet-registeration")}
+      />
     </div>
   );
 };

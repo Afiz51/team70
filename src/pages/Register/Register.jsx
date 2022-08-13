@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import image from "./images/Avatar.png";
+import image from "./images/app-name.png";
 import "./register.css";
 
 const Register = () => {

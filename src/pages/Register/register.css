@@ -18,15 +18,18 @@
 }
 
 .login-doctor-image {
-  width: 409px;
-  height: 400px;
+  margin-top: 330px;
+  margin-right: 170px;
+  width: 211px;
+  height: 50px;
 }
 
 .login-text-div {
-  margin-top: 50px;
+  margin-top: -30px;
   margin-bottom: 40px;
 }
 .login-text {
+  margin-top: 30px;
   font-size: 21.3px;
   height: 100%;
   width: 400px;
