@@ -32,7 +32,11 @@ const Hospitals = () => {
 
         <div className="hospital-address">
           <p>Victoria Island, Lagos</p>
-          <p className="book-a-visit" onClick={() => navigate("/book-a-visit")}>
+          <p
+            style={{ cursor: "pointer" }}
+            className="book-a-visit"
+            onClick={() => navigate("/book-a-visit")}
+          >
             Book a visit
           </p>
         </div>
